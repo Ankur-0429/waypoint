@@ -42,13 +42,7 @@ struct LoginView: View {
                 print("Login")
             } label: {
                 Text("Login")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 44)
-                    .background(Color(.systemBlue))
-                    .cornerRadius(8)
+                    .submitButtonStyle()
             }.padding(.vertical)
             
             Spacer()
@@ -56,7 +50,7 @@ struct LoginView: View {
             Divider()
             
             NavigationLink {
-                Text("Sign Up")
+                RegisterView()
             } label: {
                 HStack(spacing: 3) {
                     Text("Don't have an account?")
@@ -76,7 +70,7 @@ struct LoginView: View {
 
 
 #Preview {
-    NavigationStack {
+    NavigationView {
         LoginView()
     }
 }

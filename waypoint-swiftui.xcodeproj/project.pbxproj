@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E601822A99E59F00216FC9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E601812A99E59F00216FC9 /* RegisterView.swift */; };
 		02F9585D2A99C9A300BFA797 /* waypoint_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9585C2A99C9A300BFA797 /* waypoint_swiftuiApp.swift */; };
 		02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9585E2A99C9A300BFA797 /* ContentView.swift */; };
 		02F958612A99C9A600BFA797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F958602A99C9A600BFA797 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E601812A99E59F00216FC9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		02F958592A99C9A300BFA797 /* waypoint-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "waypoint-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F9585C2A99C9A300BFA797 /* waypoint_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waypoint_swiftuiApp.swift; sourceTree = "<group>"; };
 		02F9585E2A99C9A300BFA797 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,17 +78,18 @@
 		02F9586A2A99C9CC00BFA797 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				02F9586B2A99C9DE00BFA797 /* Login */,
+				02F9586B2A99C9DE00BFA797 /* Authentication */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		02F9586B2A99C9DE00BFA797 /* Login */ = {
+		02F9586B2A99C9DE00BFA797 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				02F9586C2A99C9E800BFA797 /* LoginView.swift */,
+				02E601812A99E59F00216FC9 /* RegisterView.swift */,
 			);
-			path = Login;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		02F9586E2A99CC2900BFA797 /* Extensions */ = {
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02F9586D2A99C9E800BFA797 /* LoginView.swift in Sources */,
+				02E601822A99E59F00216FC9 /* RegisterView.swift in Sources */,
 				02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */,
 				02F958702A99CC3800BFA797 /* View+Extensions.swift in Sources */,
 				02F9585D2A99C9A300BFA797 /* waypoint_swiftuiApp.swift in Sources */,
