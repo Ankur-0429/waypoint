@@ -11,6 +11,8 @@
 		02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9585E2A99C9A300BFA797 /* ContentView.swift */; };
 		02F958612A99C9A600BFA797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F958602A99C9A600BFA797 /* Assets.xcassets */; };
 		02F958642A99C9A600BFA797 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F958632A99C9A600BFA797 /* Preview Assets.xcassets */; };
+		02F9586D2A99C9E800BFA797 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9586C2A99C9E800BFA797 /* LoginView.swift */; };
+		02F958702A99CC3800BFA797 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9586F2A99CC3800BFA797 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		02F9585E2A99C9A300BFA797 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		02F958602A99C9A600BFA797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F958632A99C9A600BFA797 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		02F9586C2A99C9E800BFA797 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		02F9586F2A99CC3800BFA797 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		02F9585B2A99C9A300BFA797 /* waypoint-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				02F9586E2A99CC2900BFA797 /* Extensions */,
+				02F9586A2A99C9CC00BFA797 /* Core */,
 				02F9585C2A99C9A300BFA797 /* waypoint_swiftuiApp.swift */,
 				02F9585E2A99C9A300BFA797 /* ContentView.swift */,
 				02F958602A99C9A600BFA797 /* Assets.xcassets */,
@@ -65,6 +71,30 @@
 				02F958632A99C9A600BFA797 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02F9586A2A99C9CC00BFA797 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				02F9586B2A99C9DE00BFA797 /* Login */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		02F9586B2A99C9DE00BFA797 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				02F9586C2A99C9E800BFA797 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		02F9586E2A99CC2900BFA797 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02F9586F2A99CC3800BFA797 /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F9586D2A99C9E800BFA797 /* LoginView.swift in Sources */,
 				02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */,
+				02F958702A99CC3800BFA797 /* View+Extensions.swift in Sources */,
 				02F9585D2A99C9A300BFA797 /* waypoint_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +307,8 @@
 				DEVELOPMENT_TEAM = Q8RK5RZ36Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "waypoint-swiftui/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +338,8 @@
 				DEVELOPMENT_TEAM = Q8RK5RZ36Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "waypoint-swiftui/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
