@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02E601822A99E59F00216FC9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E601812A99E59F00216FC9 /* RegisterView.swift */; };
+		02E601852A9AAF2000216FC9 /* VerifyEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E601842A9AAF2000216FC9 /* VerifyEmailView.swift */; };
 		02F9585D2A99C9A300BFA797 /* waypoint_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9585C2A99C9A300BFA797 /* waypoint_swiftuiApp.swift */; };
 		02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9585E2A99C9A300BFA797 /* ContentView.swift */; };
 		02F958612A99C9A600BFA797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F958602A99C9A600BFA797 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		02E601812A99E59F00216FC9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		02E601842A9AAF2000216FC9 /* VerifyEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailView.swift; sourceTree = "<group>"; };
 		02F958592A99C9A300BFA797 /* waypoint-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "waypoint-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F9585C2A99C9A300BFA797 /* waypoint_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waypoint_swiftuiApp.swift; sourceTree = "<group>"; };
 		02F9585E2A99C9A300BFA797 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E601832A9AAF0C00216FC9 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				02E601812A99E59F00216FC9 /* RegisterView.swift */,
+				02E601842A9AAF2000216FC9 /* VerifyEmailView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		02F958502A99C9A300BFA797 = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +97,8 @@
 		02F9586B2A99C9DE00BFA797 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				02E601832A9AAF0C00216FC9 /* Register */,
 				02F9586C2A99C9E800BFA797 /* LoginView.swift */,
-				02E601812A99E59F00216FC9 /* RegisterView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E601852A9AAF2000216FC9 /* VerifyEmailView.swift in Sources */,
 				02F9586D2A99C9E800BFA797 /* LoginView.swift in Sources */,
 				02E601822A99E59F00216FC9 /* RegisterView.swift in Sources */,
 				02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */,

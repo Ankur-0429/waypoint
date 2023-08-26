@@ -22,9 +22,11 @@ struct RegisterView: View {
             
             TextField("Email", text: $email)
                 .textInputStyle()
+                .keyboardType(.emailAddress)
             
-            Button {
-                print("Register")
+            NavigationLink {
+                VerifyEmailView(email: $email)
+                    .navigationBarHidden(true)
             } label: {
                 Text("Next")
                     .submitButtonStyle()
