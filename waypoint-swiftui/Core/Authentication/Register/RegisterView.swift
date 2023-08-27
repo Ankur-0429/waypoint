@@ -11,7 +11,14 @@ struct RegisterView: View {
     @State private var email: String = ""
     @Environment(\.presentationMode) var mode
     
+    enum FocusedField {
+        case email
+    }
+    
+    @FocusState private var focusedField: FocusedField?
+    
     var body: some View {
+        let ifDisable: Bool = email == ""
         VStack {
             
             VStack {
@@ -23,19 +30,26 @@ struct RegisterView: View {
             TextField("Email", text: $email)
                 .textInputStyle()
                 .keyboardType(.emailAddress)
+                .focused($focusedField, equals: .email)
             
             NavigationLink {
                 VerifyEmailView(email: $email)
                     .navigationBarHidden(true)
+                    .textContentType(.emailAddress)
             } label: {
                 Text("Next")
                     .submitButtonStyle()
-                    .disabled(email == "")
-                    .opacity(email == "" ? 0.6:1)
-                    .animation(.linear, value: email)
+                    .opacity(ifDisable ? 0.6:1)
+                    .animation(.linear, value: ifDisable)
             }.padding(.vertical)
+                .disabled(ifDisable)
+            
+            Spacer()
             
         }.padding(.horizontal, 24)
+            .onAppear {
+                focusedField = .email
+            }
     }
 }
 

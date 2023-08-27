@@ -9,14 +9,17 @@ import SwiftUI
 
 struct VerifyEmailView: View {
     @State private var confirmationCode: String = ""
-    
     @Binding var email: String
-    
     @Environment(\.presentationMode) var mode
     
+    enum FocusedField {
+        case confirmationCode
+    }
+    @FocusState private var focusedField: FocusedField?
+    
     var body: some View {
+        let ifDisable: Bool = confirmationCode == ""
         VStack {
-            
             VStack {
                 Text("Enter the confirmation code we sent to \(email)")
                     .font(.title2)
@@ -48,18 +51,24 @@ struct VerifyEmailView: View {
             TextField("Confirmation Code", text: $confirmationCode)
                 .textInputStyle()
                 .keyboardType(.numberPad)
+                .focused($focusedField, equals: .confirmationCode)
             
             Button {
                 print("Register")
             } label: {
                 Text("Next")
                     .submitButtonStyle()
-                    .disabled(confirmationCode == "")
-                    .opacity(confirmationCode == "" ? 0.6:1)
-                    .animation(.linear, value: email)
+                    .opacity(ifDisable ? 0.6:1)
+                    .animation(.linear, value: ifDisable)
             }.padding(.vertical)
+                .disabled(ifDisable)
+            
+            Spacer()
             
         }.padding(.horizontal, 24)
+            .onAppear {
+                focusedField = .confirmationCode
+            }
     }
 }
 

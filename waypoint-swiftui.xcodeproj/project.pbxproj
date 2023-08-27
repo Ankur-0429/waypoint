@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		02E601822A99E59F00216FC9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E601812A99E59F00216FC9 /* RegisterView.swift */; };
 		02E601852A9AAF2000216FC9 /* VerifyEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E601842A9AAF2000216FC9 /* VerifyEmailView.swift */; };
+		02E601872A9AC08F00216FC9 /* AddNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E601862A9AC08F00216FC9 /* AddNameView.swift */; };
+		02E601892A9AC22E00216FC9 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E601882A9AC22E00216FC9 /* CreatePasswordView.swift */; };
 		02F9585D2A99C9A300BFA797 /* waypoint_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9585C2A99C9A300BFA797 /* waypoint_swiftuiApp.swift */; };
 		02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9585E2A99C9A300BFA797 /* ContentView.swift */; };
 		02F958612A99C9A600BFA797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F958602A99C9A600BFA797 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		02E601812A99E59F00216FC9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		02E601842A9AAF2000216FC9 /* VerifyEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailView.swift; sourceTree = "<group>"; };
+		02E601862A9AC08F00216FC9 /* AddNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameView.swift; sourceTree = "<group>"; };
+		02E601882A9AC22E00216FC9 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		02F958592A99C9A300BFA797 /* waypoint-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "waypoint-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F9585C2A99C9A300BFA797 /* waypoint_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waypoint_swiftuiApp.swift; sourceTree = "<group>"; };
 		02F9585E2A99C9A300BFA797 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 			children = (
 				02E601812A99E59F00216FC9 /* RegisterView.swift */,
 				02E601842A9AAF2000216FC9 /* VerifyEmailView.swift */,
+				02E601862A9AC08F00216FC9 /* AddNameView.swift */,
+				02E601882A9AC22E00216FC9 /* CreatePasswordView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -186,6 +192,8 @@
 				02E601822A99E59F00216FC9 /* RegisterView.swift in Sources */,
 				02F9585F2A99C9A300BFA797 /* ContentView.swift in Sources */,
 				02F958702A99CC3800BFA797 /* View+Extensions.swift in Sources */,
+				02E601892A9AC22E00216FC9 /* CreatePasswordView.swift in Sources */,
+				02E601872A9AC08F00216FC9 /* AddNameView.swift in Sources */,
 				02F9585D2A99C9A300BFA797 /* waypoint_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"waypoint-swiftui/Preview Content\"";
-				DEVELOPMENT_TEAM = Q8RK5RZ36Q;
+				DEVELOPMENT_TEAM = 463HMQUKCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "waypoint-swiftui/Info.plist";
@@ -330,6 +338,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"waypoint-swiftui/Preview Content\"";
-				DEVELOPMENT_TEAM = Q8RK5RZ36Q;
+				DEVELOPMENT_TEAM = 463HMQUKCH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "waypoint-swiftui/Info.plist";
@@ -361,6 +370,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
