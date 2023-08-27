@@ -10,11 +10,11 @@ import SwiftUI
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
-    
+
     var body: some View {
         VStack {
             Spacer()
-            
+
             VStack {
                 Text("Waypoint")
                     .font(.largeTitle)
@@ -22,13 +22,13 @@ struct LoginView: View {
                     .font(.title3)
                     .foregroundStyle(.gray)
             }.padding(.vertical)
-            
+
             TextField("Enter your email", text: $email)
                 .textInputStyle()
-            
+
             SecureField("Enter your password", text: $password)
                 .textInputStyle()
-            
+
             Button {
                 print("forgot Password")
             } label: {
@@ -37,37 +37,34 @@ struct LoginView: View {
                     .fontWeight(.semibold)
                     .padding(.top)
             }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
-            
+
             Button {
                 print("Login")
             } label: {
                 Text("Login")
                     .submitButtonStyle()
             }.padding(.vertical)
-            
+
             Spacer()
-            
+
             Divider()
-            
+
             NavigationLink {
                 RegisterView()
             } label: {
                 HStack(spacing: 3) {
                     Text("Don't have an account?")
-                    
+
                     Text("Sign Up")
                         .fontWeight(.semibold)
                 }
                 .font(.footnote)
             }
             .padding(.vertical, 16)
-            
+
         }.padding(.horizontal, 24)
     }
 }
-
-
-
 
 #Preview {
     NavigationView {

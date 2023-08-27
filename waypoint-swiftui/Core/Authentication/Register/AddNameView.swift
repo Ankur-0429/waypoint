@@ -10,13 +10,13 @@ import SwiftUI
 struct AddNameView: View {
     @State private var firstName: String = ""
     @State private var lastName: String = ""
-    
+
     enum FocusedField {
         case firstName
         case lastName
     }
     @FocusState private var focusedField: FocusedField?
-    
+
     var body: some View {
         let ifDisable: Bool = firstName == "" || lastName == ""
         VStack {
@@ -24,20 +24,20 @@ struct AddNameView: View {
                 Text("Add your name")
                     .font(.title2)
                     .fontWeight(.light)
-                
+
                 Text("Add your name so that friends can find you")
                     .font(.footnote)
                     .foregroundStyle(.gray)
             }.padding(.vertical)
-            
+
             TextField("First Name", text: self.$firstName)
                 .textInputStyle()
                 .focused($focusedField, equals: .firstName)
-            
+
             TextField("Last Name", text: self.$lastName)
                 .textInputStyle()
                 .focused($focusedField, equals: .lastName)
-            
+
             Button {
                 print("Register")
             } label: {
@@ -47,9 +47,9 @@ struct AddNameView: View {
                     .animation(.linear, value: ifDisable)
             }.padding(.vertical)
             .disabled(ifDisable)
-            
+
             Spacer()
-            
+
         }.padding(.horizontal, 24)
             .onAppear {
                 focusedField = .firstName

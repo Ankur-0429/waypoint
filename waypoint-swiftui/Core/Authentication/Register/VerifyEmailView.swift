@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct VerifyEmailView: View {
-    @State private var confirmationCode: String = ""
     @Binding var email: String
+    @State private var showAlert: Bool = false
     @Environment(\.presentationMode) var mode
-    
-    enum FocusedField {
-        case confirmationCode
+    @EnvironmentObject var authViewModel: AuthViewModel
+
+    func checkVerification() {
+        if authViewModel.isEmailVerified {
+            // move to next screen
+        } else {
+            showAlert.toggle()
+        }
     }
-    @FocusState private var focusedField: FocusedField?
-    
+
     var body: some View {
-        let ifDisable: Bool = confirmationCode == ""
         VStack {
             VStack {
-                Text("Enter the confirmation code we sent to \(email)")
+                Text("We sent a link to \(email)")
                     .font(.title2)
                     .fontWeight(.light)
                     .padding(.vertical)
-                
+
                 HStack(spacing: 0) {
                     Button {
                         mode.wrappedValue.dismiss()
@@ -33,42 +36,40 @@ struct VerifyEmailView: View {
                         Text("Change email address ")
                     }
                     .contentShape(Rectangle())
-                    
+
                     Text("or")
-                    
-                    Button(action: {}) {
+
+                    Button {
+                        authViewModel.sendEmailVerification(email: email)
+                    } label: {
                         Text(" Send email alert again")
                     }
                     .contentShape(Rectangle())
                 }
                 .font(.footnote)
-                
-                
-                
+
             }.padding(.vertical)
                 .multilineTextAlignment(.center)
-            
-            TextField("Confirmation Code", text: $confirmationCode)
-                .textInputStyle()
-                .keyboardType(.numberPad)
-                .focused($focusedField, equals: .confirmationCode)
-            
+
             Button {
-                print("Register")
+                checkVerification()
             } label: {
                 Text("Next")
                     .submitButtonStyle()
-                    .opacity(ifDisable ? 0.6:1)
-                    .animation(.linear, value: ifDisable)
             }.padding(.vertical)
-                .disabled(ifDisable)
-            
+
             Spacer()
-            
+
         }.padding(.horizontal, 24)
             .onAppear {
-                focusedField = .confirmationCode
+                authViewModel.sendEmailVerification(email: email)
             }
+            .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Your email is not verified"),
+                        message: Text("please click the link found in your email or resend the verification link")
+                    )
+                }
     }
 }
 

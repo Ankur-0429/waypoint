@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+
     var body: some View {
+        let ifLogin = authViewModel.userSession == nil || !authViewModel.userSession!.isEmailVerified || authViewModel.currentUser == nil
         NavigationStack {
-            LoginView()
+            if ifLogin {
+                LoginView()
+            } else {
+                HomeView()
+            }
         }
     }
 }
